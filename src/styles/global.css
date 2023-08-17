@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('./custom.css');
+
+html,
+body {
+  direction: rtl;
+}

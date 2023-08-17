@@ -38,3 +38,4 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Open source tools
 
 - [Figma template](https://www.figma.com/community/file/1216616090937021365)
+- [HeroIcon](https://heroicons.com/)
