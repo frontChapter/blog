@@ -1,17 +1,14 @@
-import PocketBase from "pocketbase";
-
-const BASE_URL = "https://frontchapter-magic.iran.liara.run/";
-const pb = new PocketBase(BASE_URL);
+import { pb } from 'libs/pocketbase'
 
 const Page = async () => {
-  const posts = await pb.collection("posts").getFullList({
-    sort: "-created",
-  });
+  const posts = await pb.collection('posts').getFullList({
+    sort: '-created',
+  })
 
-  const comments = await pb.collection("comments").getFullList({
-    sort: "-created",
+  const comments = await pb.collection('comments').getFullList({
+    sort: '-created',
     filter: 'post = "ebhvqq1mk2w51ix"',
-  });
+  })
 
   return (
     <div>
@@ -25,7 +22,7 @@ const Page = async () => {
           <div>updated: {post.updated}</div>
           <div>
             <img
-              src={pb.files.getUrl(post, post.tumbnail, { thumb: "100x250" })}
+              src={pb.files.getUrl(post, post.tumbnail, { thumb: '100x250' })}
               width={100}
               height={100}
             />
@@ -39,7 +36,7 @@ const Page = async () => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
