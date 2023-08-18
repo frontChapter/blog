@@ -69,12 +69,12 @@ const Footer = async () => {
               <div className="flex flex-col mt-6 gap-y-2">
                 {categories.map((category) => (
                   <div key={category.id}>
-                    <a
+                    <Link
                       className="font-sans text-base transition link link-hover hover:text-primary hover:duration-300"
                       href={`/categories/${category.slug}`}
                     >
                       {category.title}
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
