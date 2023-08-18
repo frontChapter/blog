@@ -1,5 +1,4 @@
-import { Header } from 'components/layout'
-// import { Footer, Header } from 'components/layout'
+import { Footer, Header } from 'components/layout'
 import localFont from 'next/font/local'
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
@@ -22,7 +21,7 @@ export default function RootLayout({
         <Header />
         <main className="container px-5 mx-auto sm:px-0">{children}</main>
         <Toaster />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   )

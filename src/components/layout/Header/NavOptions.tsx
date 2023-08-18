@@ -1,3 +1,4 @@
+'use client'
 const NavOptions = ({ toggle }: { toggle: () => void }) => {
   return (
     <div className="flex items-center justify-end col-span-9 gap-6 xl:col-span-3">
