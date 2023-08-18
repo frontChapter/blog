@@ -2,7 +2,7 @@
 
 module.exports = {
   images: {
-    domains: [process.env.IMAGE_HOST ?? ''],
+    domains: [process.env.IMAGE_HOST ?? 'frontchapter-magic.iran.liara.run'],
   },
   trailingSlash: true,
   output: 'standalone',
