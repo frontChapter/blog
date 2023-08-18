@@ -24,7 +24,7 @@ const DesktopNav = () => {
             {!!item.children?.length && (
               <ul className="p-0 w-full min-w-[180px] max-w-[230px] bg-white shadow-md rounded-lg z-30">
                 {item.children?.map((child) => (
-                  <li className="relative block group">
+                  <li key={child.key} className="relative block group">
                     <Link
                       className="block px-4 py-3 text-sm whitespace-normal transition border-b border-gray-300 hover:text-primary hover:duration-300"
                       href={child.href}

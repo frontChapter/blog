@@ -1,10 +1,13 @@
+/** @type {import('next').NextConfig} */
+
 module.exports = {
+  images: {
+    domains: [process.env.IMAGE_HOST ?? ''],
+  },
+  trailingSlash: true,
+  output: 'standalone',
   reactStrictMode: true,
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
     ignoreBuildErrors: true,
   },
-};
+}

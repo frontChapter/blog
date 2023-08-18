@@ -13,7 +13,6 @@ const MobileNavItem = ({ item }) => {
 
   return (
     <div
-      key={item.key}
       className="flex flex-col font-light border-b border-gray-300 cursor-pointer last-of-type:border-0"
       {...(hasChild
         ? { onClick: () => setIsShowChildren((prev) => !prev) }
@@ -140,7 +139,9 @@ const MobileNav = ({
             </div>
             <div className="flex flex-col">
               {headerNavbar.map((item) => (
-                <MobileNavItem item={item} />
+                <React.Fragment key={item.key}>
+                  <MobileNavItem item={item} />
+                </React.Fragment>
               ))}
             </div>
           </div>

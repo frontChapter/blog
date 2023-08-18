@@ -12,7 +12,10 @@ type TNewsletterValues = {
 }
 
 const schema = Joi.object({
-  email: Joi.string().email({ tlds: false }).required(),
+  email: Joi.string().email({ tlds: false }).required().messages({
+    'string.empty': 'ایمیل خود را وارد کنید',
+    'string.email': 'ایمیل وارد شده درست نیست',
+  }),
 })
 
 const Newsletter = () => {
@@ -77,7 +80,7 @@ const Newsletter = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="w-full py-3 mt-2 font-medium text-center text-white rounded-md bg-primary disabled:bg-primary-700 disabled:cursor-not-allowed"
+            className="w-full btn btn-primary py-3 mt-2 font-medium text-center text-white rounded-md bg-primary hover:bg-primary-600 disabled:bg-primary-700 disabled:cursor-not-allowed"
           >
             عضویت رایگان!
           </button>
