@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase'
 
 export const pb = new PocketBase(
-  'https://frontchapter-magic.iran.liara.run'
+  process.env.BASE_API ?? process.env.NEXT_PUBLIC_BASE_API
 ).autoCancellation(false)
