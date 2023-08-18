@@ -2,8 +2,10 @@
 
 module.exports = {
   images: {
-    domains: [process.env.IMAGE_HOST || ''],
+    domains: [process.env.IMAGE_HOST ?? ''],
   },
+  trailingSlash: true,
+  output: 'standalone',
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
