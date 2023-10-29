@@ -1,7 +1,7 @@
 import ImageWithFallback from 'components/ImageWithFallback'
 import LatestPosts from 'components/LatestPosts'
 import { Breadcrumbs } from 'components/layout'
-import { format } from 'date-fns-jalali'
+import jalali from 'libs/jalaliDate'
 import { pb } from 'libs/pocketbase'
 import Link from 'next/link'
 import { Record } from 'pocketbase'
@@ -22,8 +22,6 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
     .getFirstListItem(`slug="${params.slug}"`, {
       expand: 'speaker,categories',
     })
-
-  console.log({ data })
 
   return (
     <div>
@@ -66,7 +64,7 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
                 </div>
               ))}
               <time dateTime={data.updated} className="text-xs md:text-base">
-                {format(new Date(data.updated), 'd MMMM yyyy')}
+                {jalali(data.updated)}
               </time>
             </div>
           </div>
