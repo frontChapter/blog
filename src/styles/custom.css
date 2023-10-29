@@ -2,7 +2,6 @@
   position: relative;
   display: inline-flex;
 }
-
 .avatar > div {
   display: block;
   aspect-ratio: 1/1;
