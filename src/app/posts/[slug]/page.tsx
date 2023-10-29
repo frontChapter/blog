@@ -1,3 +1,5 @@
+import Ad from 'components/Ad'
+import Categories from 'components/Categories'
 import ImageWithFallback from 'components/ImageWithFallback'
 import LatestPosts from 'components/LatestPosts'
 import { Breadcrumbs } from 'components/layout'
@@ -89,97 +91,8 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
         </div>
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-5 justify-center order-last lg:order-none">
           <LatestPosts />
-          <div className="rounded-xl border border-base-content border-opacity-10 p-8">
-            <h4 className="text-xl font-semibold leading-6 text-base-content">
-              Category
-            </h4>
-            <div className="pt-6">
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Technology
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  51
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Lifestyle
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  30
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Photography
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  12
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Photography
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  12
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Health &amp; Fitness
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  36
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Business
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  91
-                </span>
-              </div>
-              <div className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5">
-                <a
-                  className="text-base font-medium text-base-content text-opacity-70 capitalize hover:text-primary transition ease-in-out duration-300"
-                  href="/category/right-sidebar"
-                >
-                  Marketing
-                </a>
-                <span className="px-2 py-1 rounded-md bg-primary bg-opacity-5 text-primary text-xs font-medium">
-                  47
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="grid items-center justify-center bg-base-content/10 rounded-xl  min-h-[360px] max-w-[250px] w-full mx-auto">
-            <div className="text-base-content/60 text-center font-work ">
-              <p className="text-sm">Advertisement</p>
-              <p className="text-xl font-semibold">You can place ads</p>
-              <p className="text-lg">250x360</p>
-            </div>
-          </div>
+          <Categories />
+          <Ad />
         </div>
       </div>
     </div>
