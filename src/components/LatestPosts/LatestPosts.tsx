@@ -10,8 +10,6 @@ const LatestPosts = async () => {
     })
   ).items
 
-  console.log(posts)
-
   return (
     <div className="p-8 border border-gray-200 rounded-xl w-full">
       <h5 className="text-base-content font-bold text-2xl font-work">
