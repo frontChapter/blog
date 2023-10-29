@@ -16,7 +16,7 @@ const Breadcrumbs = ({ items }: { items: TBreadcrumb[] }) => {
           </Link>
         </li>
         {items.map((item, index) => (
-          <li>
+          <li key={item.href}>
             {!isLastIndex(items, index) ? (
               <Link className="text-gray-900" href={item.href}>
                 {item.title}

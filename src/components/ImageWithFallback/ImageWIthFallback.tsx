@@ -12,6 +12,7 @@ const ImageWithFallback = (props: TImageWithFallback) => {
     <Image
       {...rest}
       src={imgSrc}
+      alt={rest?.alt || 'image'}
       onError={() => {
         setImgSrc(fallbackSrc)
       }}
