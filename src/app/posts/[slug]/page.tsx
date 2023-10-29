@@ -1,3 +1,4 @@
+import { Breadcrumbs } from 'components/layout'
 import { pb } from 'libs/pocketbase'
 
 const SinglePost = async ({ params }: { params: { slug: string } }) => {
@@ -9,6 +10,12 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div>
+      <Breadcrumbs
+        items={[
+          { title: 'جلسات', href: '/posts' },
+          { title: data.title, href: '#' },
+        ]}
+      />
       SinglePost: {params.slug}
       <pre
         dir="ltr"

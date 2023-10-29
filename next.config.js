@@ -2,7 +2,12 @@
 
 module.exports = {
   images: {
-    domains: [process.env.IMAGE_HOST ?? 'frontchapter-magic.iran.liara.run'],
+    remotePatterns: [
+      {
+        hostname: process.env.IMAGE_HOST ?? 'frontchapter-magic.iran.liara.run',
+        protocol: 'https',
+      },
+    ],
   },
   trailingSlash: true,
   output: 'standalone',
