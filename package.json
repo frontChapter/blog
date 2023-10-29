@@ -6,6 +6,7 @@
     "@fullstacksjs/toolbox": "^4.6.1",
     "@hookform/resolvers": "^3.2.0",
     "clsx": "^2.0.0",
+    "date-fns-jalali": "^2.30.0-0",
     "joi": "^17.9.2",
     "next": "latest",
     "pocketbase": "^0.16.0",
