@@ -5,6 +5,7 @@ import LatestPosts from 'components/LatestPosts'
 import { Breadcrumbs } from 'components/layout'
 import jalali from 'libs/jalaliDate'
 import { pb } from 'libs/pocketbase'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Record } from 'pocketbase'
 
@@ -42,7 +43,7 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
             </h3>
             <div className="mt-3 md:mt-6 flex items-center gap-5 text-base-content/60">
               {data.expand.speaker.map((speaker) => (
-                <div className=" flex items-center gap-3">
+                <div key={speaker.id} className=" flex items-center gap-3">
                   <div className="avatar">
                     <div className="w-9 rounded-full">
                       <ImageWithFallback
@@ -71,13 +72,12 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
           <div className="mt-8">
-            <img
-              alt="blog_image"
+            <Image
+              alt={data.title}
               loading="lazy"
               width={800}
               height={462}
               decoding="async"
-              data-nimg={1}
               className="rounded-xl w-full"
               src={pb.files.getUrl(data, data.thumbnail)}
             />
