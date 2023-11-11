@@ -71,14 +71,14 @@ const SinglePost = async ({ params }: { params: { slug: string } }) => {
               </time>
             </div>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center">
             <Image
               alt={data.title}
               loading="lazy"
-              width={800}
+              width={462}
               height={462}
               decoding="async"
-              className="rounded-xl w-full"
+              className="rounded-xl"
               src={pb.files.getUrl(data, data.thumbnail)}
             />
           </div>
