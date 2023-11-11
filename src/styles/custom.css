@@ -2,7 +2,7 @@
   @apply relative inline-flex;
 }
 .avatar > div {
-  @apply block aspect-[1/1] overflow-hidden;
+  @apply block aspect-square overflow-hidden;
 }
 .avatar img {
   @apply h-full w-full object-cover;
