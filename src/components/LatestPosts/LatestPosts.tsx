@@ -26,7 +26,7 @@ const LatestPosts = async () => {
                       alt={post.title}
                       loading="lazy"
                       width={110}
-                      height={190}
+                      height={110}
                       decoding="async"
                       className="rounded-md"
                       src={pb.files.getUrl(post, post.thumbnail)}

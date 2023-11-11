@@ -13,7 +13,7 @@ const Categories = async () => {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3.5"
+            className="flex items-center justify-between last:border-none border-b border-base-content border-opacity-10 py-3"
           >
             <Link
               className="text-base font-medium text-base-content text-opacity-70 hover:text-primary transition ease-in-out duration-300"
