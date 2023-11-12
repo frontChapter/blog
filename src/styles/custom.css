@@ -15,7 +15,7 @@
   @apply items-center justify-center;
 }
 .badge {
-  @apply inline-flex transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter] transition transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] duration-[0.2s] ease-in-out h-5 text-sm leading-5 w-[-moz-fit-content] w-fit border border-[hsl(var(--n)_/_var(--tw-border-opacity))] bg-[hsl(var(--n)_/_var(--tw-bg-opacity))] text-[hsl(var(--nc)_/_var(--tw-text-opacity))] rounded-[var(--rounded-badge,1.9rem)] px-[0.563rem];
+  @apply inline-flex transition duration-[0.2s] ease-in-out h-5 text-sm leading-5 w-fit border border-[hsl(var(--n)_/_var(--tw-border-opacity))] bg-[hsl(var(--n)_/_var(--tw-bg-opacity))] text-[hsl(var(--nc)_/_var(--tw-text-opacity))] rounded-[var(--rounded-badge,1.9rem)] px-[0.563rem];
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
   --tw-text-opacity: 1;
@@ -25,7 +25,7 @@
 }
 .breadcrumbs > ol,
 .breadcrumbs > ul {
-  @apply flex items-center whitespace-nowrap min-h-[-moz-min-content] min-h-min;
+  @apply flex items-center whitespace-nowrap min-h-min;
 }
 .breadcrumbs > ol > li,
 .breadcrumbs > ul > li {
@@ -40,7 +40,7 @@
   @apply underline;
 }
 .btn {
-  @apply inline-flex shrink-0 cursor-pointer select-none flex-wrap items-center justify-center border-[hsl(var(--n)_/_var(--tw-border-opacity))] text-center transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter] transition transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] duration-[0.2s] ease-in-out rounded-[var(--rounded-btn,0.5rem)] h-12 text-sm leading-5 leading-[1em] min-h-[3rem] font-semibold uppercase no-underline border-[length:var(--border-btn,1px)] animate-[button-pop_var(--animation-btn,0.25s)_ease-out] bg-[hsl(var(--n)_/_var(--tw-bg-opacity))] text-[hsl(var(--nc)_/_var(--tw-text-opacity))] px-4 border-transparent;
+  @apply inline-flex shrink-0 cursor-pointer select-none flex-wrap items-center justify-center text-center transition  duration-[0.2s] ease-in-out rounded-[var(--rounded-btn,0.5rem)] h-12 text-sm leading-5 min-h-[3rem] font-semibold uppercase no-underline border-[length:var(--border-btn,1px)] animate-[button-pop_var(--animation-btn,0.25s)_ease-out] bg-[hsl(var(--n)_/_var(--tw-bg-opacity))] text-[hsl(var(--nc)_/_var(--tw-text-opacity))] px-4 border-transparent;
   text-transform: var(--btn-text-case, uppercase);
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
@@ -105,7 +105,6 @@
 }
 .card.image-full > figure img {
   @apply h-full object-cover;
-  -o-object-fit: cover;
 }
 .card.image-full > .card-body {
   @apply relative z-20 text-[hsl(var(--nc)_/_var(--tw-text-opacity))];
@@ -124,7 +123,7 @@
   @apply outline-none outline-offset-2;
 }
 .dropdown .dropdown-content {
-  @apply invisible absolute z-50 opacity-0 origin-top transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter] transition transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] duration-[0.2s] ease-in-out;
+  @apply invisible absolute z-50 opacity-0 origin-top transition  duration-[0.2s] ease-in-out;
   --tw-scale-x: 0.95;
   --tw-scale-y: 0.95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -180,7 +179,7 @@
   @apply flex select-none items-center justify-between px-1 py-2;
 }
 .input {
-  @apply shrink h-12 text-base leading-loose leading-6 border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--b1)_/_var(--tw-bg-opacity))] rounded-[var(--rounded-btn,0.5rem)] px-4;
+  @apply shrink h-12 text-base leading-6 border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--b1)_/_var(--tw-bg-opacity))] rounded-[var(--rounded-btn,0.5rem)] px-4;
   --tw-border-opacity: 0;
   --tw-bg-opacity: 1;
 }
@@ -267,12 +266,12 @@
 }
 
 .textarea {
-  @apply shrink min-h-[3rem] text-sm leading-5 leading-loose border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--b1)_/_var(--tw-bg-opacity))] rounded-[var(--rounded-btn,0.5rem)] px-4 py-2;
+  @apply shrink min-h-[3rem] text-sm leading-5 border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--b1)_/_var(--tw-bg-opacity))] rounded-[var(--rounded-btn,0.5rem)] px-4 py-2;
   --tw-border-opacity: 0;
   --tw-bg-opacity: 1;
 }
 .toggle {
-  @apply shrink-0 h-6 w-12 cursor-pointer appearance-none border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--bc)_/_var(--tw-bg-opacity))] duration-[0.3s] ease-in-out rounded-[var(--rounded-badge,1.9rem)] transition-[background,box-shadow] duration-[var(--animation-input,0.2s)] ease-[ease-in-out] shadow-[var(--handleoffsetcalculator)_0_0_2px_var(--tglbg)_inset,0_0_0_2px_var(--tglbg)_inset,var(--togglehandleborder)];
+  @apply shrink-0 h-6 w-12 cursor-pointer appearance-none border border-[hsl(var(--bc)_/_var(--tw-border-opacity))] bg-[hsl(var(--bc)_/_var(--tw-bg-opacity))] duration-300 ease-in-out rounded-[var(--rounded-badge,1.9rem)] transition-[background,box-shadow] shadow-[var(--handleoffsetcalculator)_0_0_2px_var(--tglbg)_inset,0_0_0_2px_var(--tglbg)_inset,var(--togglehandleborder)];
   --tglbg: hsl(var(--b1));
   --handleoffset: 1.5rem;
   --handleoffsetcalculator: calc(var(--handleoffset) * -1);
@@ -783,7 +782,7 @@
   @apply py-1;
 }
 .menu :where(li:not(.disabled)) > :where(:not(ul)) {
-  @apply outline-none outline-offset-2 transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter] transition transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] duration-[0.2s] ease-in-out;
+  @apply outline-none outline-offset-2 transition  duration-[0.2s] ease-in-out;
 }
 .menu > :where(li:first-child) {
   @apply rounded-br-[unset] rounded-t-[inherit] rounded-bl-[unset];
@@ -905,7 +904,7 @@
   @apply h-16 w-16 p-0 rounded-full;
 }
 .menu-horizontal {
-  @apply inline-flex w-[-moz-max-content] w-max flex-row;
+  @apply inline-flex w-max flex-row;
 }
 .menu-horizontal :where(li) {
   @apply flex-row;
@@ -971,52 +970,6 @@
 }
 .menu-horizontal > :where(li:last-child) > :where(:not(ul)) {
   @apply rounded-tl-[unset] rounded-tr-[inherit] rounded-br-[inherit] rounded-bl-[unset];
-}
-
-@keyframes progress-loading {
-  50% {
-    left: 107%;
-  }
-}
-
-@keyframes radiomark {
-  0% {
-    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
-  }
-
-  50% {
-    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
-  }
-
-  to {
-    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
-  }
-}
-
-@keyframes rating-pop {
-  0% {
-    transform: translateY(-0.125em);
-  }
-
-  40% {
-    transform: translateY(-0.125em);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes toast-pop {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 @keyframes button-pop {
